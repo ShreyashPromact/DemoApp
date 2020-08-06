@@ -25,5 +25,4 @@ abstract class SafeRequest {
             throw IOException(message.toString())
         }
     }
-
 }

@@ -27,5 +27,4 @@ interface MyApi {
                 .create(MyApi::class.java)
         }
     }
-
 }
