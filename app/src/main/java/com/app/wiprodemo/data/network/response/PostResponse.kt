@@ -1,4 +1,7 @@
 package com.app.wiprodemo.data.network.response
 
-class PostResponse {
-}
+import com.app.wiprodemo.data.db.entities.Post
+
+data class PostResponse (
+    val posts: List<Post>
+)
