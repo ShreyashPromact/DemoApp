@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WiproDemoApp</string>
+    <string name="post_title">Title of the Post</string>
+    <string name="post_body_text">body of the post</string>
 </resources>
