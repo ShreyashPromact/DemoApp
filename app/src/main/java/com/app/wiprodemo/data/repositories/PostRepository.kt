@@ -41,6 +41,10 @@ class PostRepository(
 
     private fun savePosts(posts: List<Post>) {
         Coroutines.io {
+            // Right now we don't have unique key as ID in this Post object
+            // That's why we are clearing all data before adding it.
+            // So we don't have duplicate Posts.
+            db.clearAllTables() // This needs to be removed once we have unique key for the Post
             db.getPostDao().saveAllPosts(posts)
         }
     }
