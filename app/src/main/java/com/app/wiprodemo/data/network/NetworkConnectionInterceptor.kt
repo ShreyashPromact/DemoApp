@@ -3,6 +3,7 @@ package com.app.wiprodemo.data.network
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import com.app.wiprodemo.R
 import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
@@ -13,7 +14,7 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         if (!isInternetAvailable())
-            throw IOException("Make sure you have an active data connection")
+            throw IOException(applicationContext.getString(R.string.no_connectivity))
         return chain.proceed(chain.request())
     }
 

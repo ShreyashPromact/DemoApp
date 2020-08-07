@@ -31,7 +31,7 @@ class PostActivity : AppCompatActivity(), KodeinAware {
             fetchData()
         }
 
-        // needed to load data for first time
+        // need to load data for first time
         fetchData()
     }
 

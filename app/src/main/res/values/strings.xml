@@ -5,4 +5,5 @@
 
     <string name="no_description">(no description available)</string>
     <string name="no_title">(no title available)</string>
+    <string name="no_connectivity">Make sure you have an active data connection</string>
 </resources>
