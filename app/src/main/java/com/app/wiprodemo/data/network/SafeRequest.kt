@@ -1,6 +1,7 @@
 package com.app.wiprodemo.data.network
 
 import android.util.Log
+import com.app.wiprodemo.util.ApiException
 import org.json.JSONException
 import retrofit2.Response
 import java.io.IOException
@@ -22,7 +23,7 @@ abstract class SafeRequest {
                 message.append("\n")
             }
             message.append("Error Code: ${response.code()}")
-            throw IOException(message.toString())
+            throw ApiException(message.toString())
         }
     }
 }
