@@ -32,8 +32,8 @@ class PostRepository(
 
     private suspend fun fetchPosts() {
         try {
-            val response = apiRequest { api.getPosts() }
-            posts.postValue(response)
+            val response = apiRequest { api.getPostsResponse() }
+            posts.postValue(response.rows)
         } catch (e: Exception) {
             e.printStackTrace()
         }

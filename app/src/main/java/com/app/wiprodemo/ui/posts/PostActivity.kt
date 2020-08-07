@@ -35,6 +35,7 @@ class PostActivity : AppCompatActivity(), KodeinAware {
 
         postViewModel = ViewModelProviders.of(this, postFactory).get(PostViewModel::class.java)
 
+        fetchData();
     }
 
     private fun fetchData() = Coroutines.main {
